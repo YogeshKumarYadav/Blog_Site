@@ -1,0 +1,15 @@
+<%- include("partials/header") -%>
+<!-- <div class="bdy1"> -->
+    <h1>Home</h1>
+    <p><%= p_home %></p>
+    <% objlist %>
+    <% objlist.forEach(function(i) { %>
+        <h1><%= i.title %></h1> 
+        <p>
+            <%= i.content.substring(0, 100) + " ..." %>
+            <a href="/post/<%= i._id %>">Read more</a>
+        </p>
+    <% } ) %>
+<!-- </div> -->
+
+<%- include("partials/footer") -%>
